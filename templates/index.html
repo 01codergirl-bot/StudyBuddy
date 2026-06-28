@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>StudyBuddy</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#FFF8F2;
+min-height:100vh;
+padding:40px;
+color:#333;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+}
+
+.logo{
+font-size:42px;
+font-weight:bold;
+color:#8C6FF7;
+}
+
+.logo span{
+color:#FF9DB5;
+}
+
+.container{
+display:grid;
+grid-template-columns:320px 1fr;
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.leftCard{
+background:white;
+border-radius:28px;
+padding:25px;
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.mascot{
+font-size:90px;
+margin:20px 0;
+}
+
+.message{
+font-size:20px;
+font-weight:bold;
+color:#6EBE44;
+}
+
+.rightCard{
+background:white;
+border-radius:28px;
+padding:35px;
+box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.title{
+font-size:28px;
+margin-bottom:20px;
+color:#7B5CF3;
+}
+
+textarea{
+width:100%;
+height:260px;
+padding:18px;
+border-radius:18px;
+border:none;
+background:#F7F5FF;
+font-size:16px;
+resize:none;
+outline:none;
+}
+
+textarea:focus{
+background:#EEE9FF;
+}
+
+.button{
+margin-top:20px;
+width:100%;
+padding:18px;
+border:none;
+border-radius:18px;
+font-size:20px;
+cursor:pointer;
+background:#7ED957;
+color:white;
+transition:.2s;
+}
+
+.button:hover{
+transform:translateY(-2px);
+}
+
+.smallText{
+margin-top:15px;
+font-size:14px;
+color:#888;
+text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<div class="logo">🐣 Study<span>Buddy</span></div>
+</div>
+
+<div class="container">
+
+<!-- LEFT PANEL -->
+<div class="leftCard">
+<div class="mascot">🐤</div>
+<div class="message">Ready to learn something new?</div>
+<p class="smallText">
+Paste your notes and I’ll turn them into a quiz ✨
+</p>
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="rightCard">
+
+<div class="title">✨ Create Your Study Set</div>
+
+<form action="/process" method="POST">
+<textarea name="notes" placeholder="Paste your notes here..."></textarea>
+
+<button class="button" type="submit">
+Start Learning →
+</button>
+</form>
+
+<p class="smallText">
+Tip: messy notes are fine — I’ll clean them up for you.
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
