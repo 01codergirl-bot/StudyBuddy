@@ -5,7 +5,10 @@ from groq import Groq
 app = Flask(__name__)
 app.secret_key = "dev_secret_key"
 
-client = Groq(api_key="your key")
+import os
+from groq import Groq
+
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
 @app.route("/")
